@@ -32,7 +32,7 @@ public class ThreadAdapter extends ArrayAdapter<ThreadWeb> {
         TextView nameText = (TextView) view.findViewById(R.id.thread_name);
         TextView amountText = (TextView) view.findViewById(R.id.thread_amount);
 
-        nameText.setText(thread.getThreadNumber());
+        nameText.setText(thread.getDescription());
         if(thread.getPosts() == null) {
             amountText.setText("0");
         }else{

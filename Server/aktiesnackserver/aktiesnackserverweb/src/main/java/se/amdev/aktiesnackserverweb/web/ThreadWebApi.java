@@ -46,18 +46,26 @@ public class ThreadWebApi {
 				return Response.ok(new ThreadWeb(threadData)).build();
 			}
 			else {
-				return Response.status(Status.BAD_REQUEST).build();
+				return Response.status(Status.NO_CONTENT).build();
 			}
 			
 		}
 		if(top != null){
 			Collection<ThreadWeb> threads = parseCollectionThread(service.findLastUpdatedThreads());
+			if(threads == null){
+				return Response.status(Status.NO_CONTENT).build();
+			}
+			
 			GenericEntity<Collection<ThreadWeb>> entity = new GenericEntity<Collection<ThreadWeb>>(threads){};
 			
 			return Response.ok(entity).build();
 		}
 		else{
 			Collection<ThreadWeb> threads = parseCollectionThread(service.findAllThreads());
+			if(threads == null){
+				return Response.status(Status.NO_CONTENT).build();
+			}
+			
 			GenericEntity<Collection<ThreadWeb>> entity = new GenericEntity<Collection<ThreadWeb>>(threads){};
 			
 			return Response.ok(entity).build();

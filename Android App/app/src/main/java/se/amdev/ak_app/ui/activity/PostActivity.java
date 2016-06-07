@@ -15,7 +15,8 @@ public class PostActivity extends SingleFragmentActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         int position = intent.getIntExtra("Pos", 0);
-        ApplicationLoader.getPost(position);
+        String type = intent.getStringExtra("Type");
+        ApplicationLoader.getPost(position, type);
     }
 
     @Override

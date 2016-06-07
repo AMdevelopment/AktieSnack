@@ -44,21 +44,16 @@ public class CollectionThreadAdapter implements JsonDeserializer<ArrayList<Threa
 
 	@Override
 	public ArrayList<ThreadWeb> deserialize(JsonElement arg0, Type arg1, JsonDeserializationContext arg2) throws JsonParseException {
-
 		JsonObject json = arg0.getAsJsonObject();
 		JsonArray threads = json.get("threads").getAsJsonArray();
-
 		ArrayList<ThreadWeb> threadWebs = new ArrayList<>();
 
+		int i = 0;
 		for(JsonElement e : threads){
-//			JsonObject object = e.getAsJsonObject();
-//			String threadNumber = object.get("threadNumber").getAsString();
-//			String description = object.get("description").getAsString();
-
-//			threadWebs.add(new ThreadWeb(threadNumber, description, posts));
-
 			threadWebs.add(gson.fromJson(e, ThreadWeb.class));
+			i++;
 		}
+
 		return threadWebs;
 	}
 }

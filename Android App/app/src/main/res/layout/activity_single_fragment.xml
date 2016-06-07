@@ -4,6 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/single_fragment"
-    tools:context="se.amdev.ak_app.ui.MainActivity">
+    tools:context="se.amdev.ak_app.ui.activity.LoginActivity">
 
 </FrameLayout>

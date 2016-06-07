@@ -45,10 +45,14 @@ public class PostWebApi {
 				return Response.ok(new PostWeb(postData)).build();
 			}
 			else {
-				return Response.status(Status.BAD_REQUEST).build();
+				return Response.status(Status.NO_CONTENT).build();
 			}
 		}else{
 			Collection<PostWeb> posts = parseCollectionPost(service.findAllPosts());
+			if(posts == null){
+				return Response.status(Status.NO_CONTENT).build();
+			}
+			
 			GenericEntity<Collection<PostWeb>> entity = new GenericEntity<Collection<PostWeb>>(posts){};
 			
 			return Response.ok(entity).build();
