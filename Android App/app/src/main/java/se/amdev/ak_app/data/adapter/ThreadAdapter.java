@@ -29,7 +29,7 @@ public final class ThreadAdapter implements JsonDeserializer<ThreadWeb>, JsonSer
     @Override
     public JsonElement serialize(ThreadWeb thread, Type type, JsonSerializationContext context) {
         JsonObject json = new JsonObject();
-        json.addProperty("threadNumber", thread.getThreadNumber());
+        json.addProperty("threadName", thread.getThreadNumber());
         json.addProperty("description", thread.getDescription());
 
         return json;
@@ -38,21 +38,16 @@ public final class ThreadAdapter implements JsonDeserializer<ThreadWeb>, JsonSer
     @Override
     public ThreadWeb deserialize(JsonElement arg0, Type arg1, JsonDeserializationContext arg2) throws JsonParseException {
         JsonObject json = arg0.getAsJsonObject();
-        String threadNumber = json.get("threadNumber").getAsString();
+        String threadNumber = json.get("threadName").getAsString();
         String description = json.get("description").getAsString();
+        String numberOfPosts = json.get("numberOfPosts").getAsString();
         String creationTime = json.get("creationTime").getAsString();
         String lastUpdatedTime = json.get("lastUpdatedTime").getAsString();
+        String currency = json.get("currency").getAsString();
 
         Collection<PostWeb> posts = new ArrayList<>();
 
-        if (json.get("posts") != null) {
-            JsonArray array = json.get("posts").getAsJsonArray();
-
-            for (JsonElement p : array) {
-                posts.add(gson.fromJson(p, PostWeb.class));
-            }
-        }
-        return new ThreadWeb(threadNumber, description, posts, creationTime, lastUpdatedTime);
+        return new ThreadWeb(threadNumber, description, posts, currency, creationTime, lastUpdatedTime, numberOfPosts);
     }
 }
 

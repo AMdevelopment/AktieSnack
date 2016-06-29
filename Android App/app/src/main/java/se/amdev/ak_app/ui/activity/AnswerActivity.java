@@ -13,6 +13,8 @@ import se.amdev.ak_app.ui.fragment.LoginFragment;
  */
 public class AnswerActivity extends SingleFragmentActivity {
 
+    public static int threadPosition;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

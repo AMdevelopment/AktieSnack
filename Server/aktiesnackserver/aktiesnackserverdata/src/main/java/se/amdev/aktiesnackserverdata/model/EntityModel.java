@@ -1,6 +1,9 @@
 package se.amdev.aktiesnackserverdata.model;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
+
 import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
@@ -25,7 +28,7 @@ public abstract class EntityModel {
 
 	@Column(name = "last_updated_time")
 	@LastModifiedDate
-	private Date lastUpdatedTime;
+	private Date lastUpdatedTime = Calendar.getInstance(TimeZone.getTimeZone("Europe/Stockholm")).getTime();
 
 	public Long getId() {
 		return id;

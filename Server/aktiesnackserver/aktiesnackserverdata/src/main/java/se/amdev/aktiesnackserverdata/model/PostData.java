@@ -13,7 +13,7 @@ public class PostData extends EntityModel {
 
 	@ManyToOne
 	private UserData user;
-	
+
 	@ManyToOne
 	private ThreadData thread;
 
@@ -24,13 +24,8 @@ public class PostData extends EntityModel {
 		this.user = user;
 		this.thread = thread;
 		this.text = text;
+		this.postNumber = String.valueOf(thread.getPosts().size() + 1);
 	}
-
-//	public PostData(PostWeb postWeb) {
-//		this.user = parseUser(postWeb.getUser());
-//		this.postNumber = postWeb.getPostNumber();
-//		this.text = postWeb.getText();
-//	}
 
 	public String getText() {
 		return text;
@@ -43,20 +38,25 @@ public class PostData extends EntityModel {
 	public UserData getUser() {
 		return user;
 	}
-	
-	public PostData setUser(UserData user){
+
+	public PostData setUser(UserData user) {
 		this.user = user;
 		return this;
 	}
-	
-	public PostData setThread(ThreadData threadData){
+
+	public PostData setThread(ThreadData threadData) {
 		this.thread = threadData;
 		this.postNumber = String.valueOf(thread.getPosts().size() + 1);
 		return this;
 	}
-	
-	public ThreadData getThread(){
+
+	public ThreadData getThread() {
 		return thread;
+	}
+	
+	public PostData setText(String text) {
+		this.text = text;
+		return this;
 	}
 
 	@Override

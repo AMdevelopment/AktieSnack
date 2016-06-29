@@ -17,7 +17,7 @@ public class LoginActivity extends SingleFragmentActivity {
         super.onCreate(savedInstanceState);
 
         if(ApplicationLoader.user != null){
-            Intent intent = new Intent(getApplication(), ThreadsActivity.class);
+            Intent intent = new Intent(getApplication(), MainActivity.class);
             startActivity(intent);
         }
     }

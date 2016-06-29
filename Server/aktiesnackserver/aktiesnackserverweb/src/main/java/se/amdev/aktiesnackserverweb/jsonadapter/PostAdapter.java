@@ -12,7 +12,6 @@ import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 
 import se.amdev.aktiesnackserverweb.model.PostWeb;
-import se.amdev.aktiesnackserverweb.model.ThreadWeb;
 import se.amdev.aktiesnackserverweb.model.UserWeb;
 
 /**
@@ -36,11 +35,11 @@ public final class PostAdapter implements JsonDeserializer<PostWeb>, JsonSeriali
     @Override
     public PostWeb deserialize(JsonElement arg0, Type arg1, JsonDeserializationContext arg2) throws JsonParseException {
         JsonObject json = arg0.getAsJsonObject();
-        UserWeb user = new Gson().fromJson(json.get("user"), UserWeb.class);
-        ThreadWeb thread = new Gson().fromJson(json.get("thread"), ThreadWeb.class);
+//        UserWeb user = new Gson().fromJson(json.get("user"), UserWeb.class);
+//        ThreadWeb thread = new Gson().fromJson(json.get("thread"), ThreadWeb.class);
         String text = json.get("text").getAsString();
 
-        return new PostWeb(user, thread, text);
+        return new PostWeb(text);
     }
 }
 

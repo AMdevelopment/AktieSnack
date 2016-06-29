@@ -8,11 +8,17 @@ import java.util.Collection;
 @Entity(name = "Threads")
 public final class ThreadData extends EntityModel {
 
-	@Column(nullable = false, unique = true)
+	@Column(nullable = false)
 	private String threadName;
 
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String description;
+
+	@Column(nullable = false)
+	private String currency;
+	
+	@OneToOne(fetch = FetchType.EAGER)
+	private StockData stock;
 	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "thread")
 	Collection<PostData> posts;
@@ -23,9 +29,10 @@ public final class ThreadData extends EntityModel {
 		
 	}
 
-	public ThreadData(String threadNumber, String description) {
+	public ThreadData(String threadNumber, String description, String currency) {
 		this.threadName = threadNumber;
 		this.description = description;
+		this.currency = currency;
 		this.posts = new ArrayList<>();
 	}
 
@@ -33,8 +40,16 @@ public final class ThreadData extends EntityModel {
 		return description;
 	}
 
-	public String getThreadNumber() {
+	public String getThreadName() {
 		return threadName;
+	}
+	
+	public StockData getStock() {
+		return stock;
+	}
+	
+	public String getCurrency() {
+		return currency;
 	}
 
 	@Override
@@ -75,8 +90,13 @@ public final class ThreadData extends EntityModel {
 		this.numberOfPosts = numberOfPosts + 1;
 		return this;
 	}
+	
+	public ThreadData addStock(StockData stockData){
+		this.stock = stockData;
+		return this;
+	}
 
-	public void setThreadNumber(String threadNumber) {
-		this.threadName = threadNumber;
+	public void setThreadName(String threadName) {
+		this.threadName = threadName;
 	}
 }

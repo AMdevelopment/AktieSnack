@@ -22,9 +22,9 @@ public class PostWeb {
 	protected PostWeb() {
 	}
 
-	public PostWeb(UserWeb user, ThreadWeb thread, String text) {
-		this.user = user;
-		this.thread = thread;
+	public PostWeb(String text) {
+//		this.user = user;
+//		this.thread = thread;
 //		this.postNumber = postNumber;
 		this.text = text;
 	}

@@ -16,7 +16,7 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.UUID;
 
-@Path("/user")
+@Path("/users")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class UserWebApi {

@@ -7,8 +7,14 @@ import javax.ws.rs.core.Application;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import se.amdev.stockdownloader.StockDownloaderMain;
+
 @ApplicationPath("/*")
 public class Loader extends Application {
+	
+	public Loader(){
+		StockDownloaderMain.stockLoader();
+	}
 
 	private static AnnotationConfigApplicationContext context;
 

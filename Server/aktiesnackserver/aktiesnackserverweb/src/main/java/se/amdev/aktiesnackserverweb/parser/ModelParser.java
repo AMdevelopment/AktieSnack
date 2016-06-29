@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import se.amdev.aktiesnackserverdata.model.PostData;
+import se.amdev.aktiesnackserverdata.model.StockData;
 import se.amdev.aktiesnackserverdata.model.ThreadData;
 import se.amdev.aktiesnackserverdata.model.UserData;
 import se.amdev.aktiesnackserverweb.model.PostWeb;
+import se.amdev.aktiesnackserverweb.model.StockWeb;
 import se.amdev.aktiesnackserverweb.model.ThreadWeb;
 import se.amdev.aktiesnackserverweb.model.UserWeb;
 
@@ -34,7 +36,7 @@ public class ModelParser {
 			return null;
 		}
 
-		return new ThreadWeb(threadData.getThreadNumber(), threadData.getDescription());
+		return new ThreadWeb(threadData.getThreadName(), threadData.getDescription(), threadData.getCurrency());
 	}
 
 	public static ThreadData parseThread(ThreadWeb threadWeb) {
@@ -42,7 +44,7 @@ public class ModelParser {
 			return null;
 		}
 
-		return new ThreadData(threadWeb.getThreadNumber(), threadWeb.getDescription());
+		return new ThreadData(threadWeb.getThreadName(), threadWeb.getDescription(), threadWeb.getCurrency());
 	}
 
 	public static Collection<ThreadWeb> parseCollectionThread(Collection<ThreadData> threads) {
@@ -65,5 +67,16 @@ public class ModelParser {
 		posts.forEach(p -> postsToReturn.add(new PostWeb(p)));
 		
 		return postsToReturn;
+	}
+	
+	public static Collection<StockWeb> parseCollectionStock(Collection<StockData> stocks) {
+		if(stocks.isEmpty())
+		{
+			return null;
+		}
+		Collection<StockWeb> stocksToReturn = new ArrayList<>();
+		stocks.forEach(s -> stocksToReturn.add(new StockWeb(s)));
+		
+		return stocksToReturn;
 	}
 }

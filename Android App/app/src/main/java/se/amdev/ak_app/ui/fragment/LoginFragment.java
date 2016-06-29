@@ -7,19 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import se.amdev.ak_app.R;
-import se.amdev.ak_app.data.loader.ApplicationLoader;
-import se.amdev.ak_app.ui.activity.PostActivity;
-import se.amdev.ak_app.ui.activity.ThreadsActivity;
-import se.amdev.ak_app.ui.adapter.ThreadAdapter;
+import se.amdev.ak_app.ui.activity.MainActivity;
 
 /**
  * Created by Martin on 07/06/16.
@@ -58,7 +50,8 @@ public class LoginFragment extends Fragment {
         guestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), ThreadsActivity.class);
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                intent.putExtra("guest", "true");
                 startActivity(intent);
             }
         });

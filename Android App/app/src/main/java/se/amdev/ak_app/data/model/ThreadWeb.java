@@ -11,20 +11,28 @@ public class ThreadWeb {
 	
 	private Collection<PostWeb> posts;
 
+	private String numberOfPosts;
+
 	private String creationTime;
 
 	private String lastUpdatedTime;
+
+	private String currency;
+
+	private StockWeb stock;
 
 	protected ThreadWeb() {
 
 	}
 
-	public ThreadWeb(String threadNumber, String description, Collection<PostWeb> posts, String creationTime, String lastUpdatedTime) {
+	public ThreadWeb(String threadNumber, String description, Collection<PostWeb> posts, String currency, String creationTime, String lastUpdatedTime, String numberOfPosts) {
 		this.threadNumber = threadNumber;
 		this.description = description;
 		this.posts = posts;
+		this.numberOfPosts = numberOfPosts;
 		this.creationTime = creationTime;
 		this.lastUpdatedTime = lastUpdatedTime;
+		this.currency = currency;
 	}
 	
 	public String getThreadNumber() {
@@ -43,6 +51,14 @@ public class ThreadWeb {
 		this.description = description;
 	}
 
+	public void setStock(StockWeb stock) {
+		this.stock = stock;
+	}
+
+	public StockWeb getStock() {
+		return stock;
+	}
+
 	public Collection<PostWeb> getPosts() {
 		return posts;
 	}
@@ -55,7 +71,15 @@ public class ThreadWeb {
 		return creationTime;
 	}
 
+	public String getCurrency() {
+		return currency;
+	}
+
 	public String getLastUpdatedTime() {
 		return lastUpdatedTime;
+	}
+
+	public String getNumberOfPosts() {
+		return numberOfPosts;
 	}
 }

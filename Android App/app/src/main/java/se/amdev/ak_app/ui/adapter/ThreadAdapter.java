@@ -11,6 +11,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import se.amdev.ak_app.R;
+import se.amdev.ak_app.data.loader.ApplicationLoader;
+import se.amdev.ak_app.data.model.StockWeb;
 import se.amdev.ak_app.data.model.ThreadWeb;
 
 /**
@@ -32,11 +34,16 @@ public class ThreadAdapter extends ArrayAdapter<ThreadWeb> {
         TextView nameText = (TextView) view.findViewById(R.id.thread_name);
         TextView amountText = (TextView) view.findViewById(R.id.thread_amount);
 
-        nameText.setText(thread.getDescription());
-        if(thread.getPosts() == null) {
-            amountText.setText("0");
+        nameText.setText(thread.getThreadNumber());
+
+        StockWeb stock = ApplicationLoader.stockWebHashMap.get(thread.getDescription());
+
+        ApplicationLoader.threadList.get(position).setStock(stock);
+
+        if(thread.getNumberOfPosts().equals("0")) {
+            amountText.setText(stock.getChangePercent());
         }else{
-            amountText.setText(String.valueOf(thread.getPosts().size()));
+            amountText.setText(thread.getNumberOfPosts());
         }
 
         return view;

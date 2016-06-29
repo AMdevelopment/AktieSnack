@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import se.amdev.ak_app.R;
 import se.amdev.ak_app.data.loader.ApplicationLoader;
+import se.amdev.ak_app.ui.activity.AnswerActivity;
 import se.amdev.ak_app.ui.activity.PostActivity;
 import se.amdev.ak_app.ui.adapter.ThreadAdapter;
 
@@ -46,6 +47,7 @@ public class ThreadsFragment extends Fragment {
         allThreadsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AnswerActivity.threadPosition = position;
                 Intent intent = new Intent(getActivity(), PostActivity.class);
                 intent.putExtra("Pos", position);
                 intent.putExtra("Type", "all");
@@ -56,6 +58,7 @@ public class ThreadsFragment extends Fragment {
         topThreadsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AnswerActivity.threadPosition = position;
                 Intent intent = new Intent(getActivity(), PostActivity.class);
                 intent.putExtra("Pos", position);
                 intent.putExtra("Type", "top");

@@ -7,8 +7,6 @@ public class PostWeb {
 	private String text;
 
 	private UserWeb user;
-	
-	private ThreadWeb thread;
 
 	private String creationTime;
 
@@ -17,13 +15,16 @@ public class PostWeb {
 	protected PostWeb() {
 	}
 
-	public PostWeb(UserWeb user, ThreadWeb thread, String postNumber, String text, String creationTime, String lastUpdatedTime) {
+	public PostWeb(UserWeb user, String postNumber, String text, String creationTime, String lastUpdatedTime) {
 		this.user = user;
-		this.thread = thread;
 		this.postNumber = postNumber;
 		this.text = text;
 		this.creationTime = creationTime;
 		this.lastUpdatedTime = lastUpdatedTime;
+	}
+
+	public PostWeb(String text){
+		this.text = text;
 	}
 
 	public String getPostNumber() {
@@ -48,14 +49,6 @@ public class PostWeb {
 
 	public void setUser(UserWeb user) {
 		this.user = user;
-	}
-
-	public ThreadWeb getThread() {
-		return thread;
-	}
-
-	public void setThread(ThreadWeb thread) {
-		this.thread = thread;
 	}
 
 	public String getCreationTime() {

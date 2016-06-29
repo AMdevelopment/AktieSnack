@@ -1,93 +1,156 @@
 package se.amdev.aktiesnackserverweb.service;
 
 import se.amdev.aktiesnackserverdata.model.PostData;
+import se.amdev.aktiesnackserverdata.model.InquiryData;
+import se.amdev.aktiesnackserverdata.model.StockData;
 import se.amdev.aktiesnackserverdata.model.ThreadData;
 import se.amdev.aktiesnackserverdata.model.UserData;
 import se.amdev.aktiesnackserverdata.repository.PostRepository;
+import se.amdev.aktiesnackserverdata.repository.RegisterEmailRepository;
 import se.amdev.aktiesnackserverdata.repository.StockRepository;
 import se.amdev.aktiesnackserverdata.repository.ThreadRepository;
 import se.amdev.aktiesnackserverdata.repository.UserRepository;
 
 import static se.amdev.aktiesnackserverweb.Loader.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 
 public class WebService {
 
-    StockRepository stockRepository;
-    ThreadRepository threadRepository;
-    PostRepository postRepository;
-    UserRepository userRepository;
+	StockRepository stockRepository;
+	ThreadRepository threadRepository;
+	PostRepository postRepository;
+	UserRepository userRepository;
+	RegisterEmailRepository registerEmailRepository;
+	static Collection<String> badWords;
+	
+	public WebService() {
+		this.stockRepository = getBean(StockRepository.class);
+		this.threadRepository = getBean(ThreadRepository.class);
+		this.postRepository = getBean(PostRepository.class);
+		this.userRepository = getBean(UserRepository.class);
+		this.registerEmailRepository = getBean(RegisterEmailRepository.class);
+		badWords = new ArrayList<>();
+	}
 
-    public WebService() {
-        this.stockRepository = getBean(StockRepository.class);
-        this.threadRepository = getBean(ThreadRepository.class);
-        this.postRepository = getBean(PostRepository.class);
-        this.userRepository = getBean(UserRepository.class);
-    }
+	public UserData create(String username, String email, String firstName, String lastName) {
+		return new UserData(username, email, firstName, lastName);
+	}
 
-    public UserData create(String username, String email, String firstName, String lastName) {
-        return new UserData(username, email, firstName, lastName);
-    }
+	public ThreadData create(String threadNumber, String description, String currency) {
+		return new ThreadData(threadNumber, description, currency);
+	}
 
-    public ThreadData create(String threadNumber, String description) {
-        return new ThreadData(threadNumber, description);
-    }
+	public PostData create(UserData user, ThreadData thread, String text) {
+		return new PostData(user, thread, text);
+	}
 
-    public PostData create(UserData user, ThreadData thread, String text) {
-        return new PostData(user, thread, text);
-    }
-//
-//    public StockData create(String stockName) {
-//        return new StockData(stockName);
-//    }
+	public UserData save(UserData user) {
+		return userRepository.save(user);
+	}
 
-    public UserData save(UserData user) {
-        return userRepository.save(user);
-    }
+	public ThreadData save(ThreadData thread) {
+		return threadRepository.save(thread);
+	}
 
-    public ThreadData save(ThreadData thread) {
-        return threadRepository.save(thread);
-    }
+	public PostData save(PostData post) {
+		return postRepository.save(post);
+	}
 
-    public PostData save(PostData post) {
-        return postRepository.save(post);
-    }
+	public InquiryData registerEmail(InquiryData email) {
+		return registerEmailRepository.save(email);
+	}
 
-    public UserData findUserByUsername(String username){
-        return userRepository.findByUsername(username);
-    }
+	public void saveThreads(Collection<ThreadData> threads) {
+		for (ThreadData t : threads) {
+			threadRepository.save(t);
+		}
+	}
 
-    public ThreadData findThreadByNumber(String threadNumber){
-       return threadRepository.findByThreadName(threadNumber);
-    }
+	public HashMap<String, StockData> saveStocks(Collection<StockData> stocks) {
+		HashMap<String, StockData> returnStocks = new HashMap<>();
+		for (StockData s : stocks) {
+			returnStocks.put(s.getStockName(), stockRepository.save(s));
+		}
+		return returnStocks;
+	}
 
-    public PostData findPostByNumber(String postNumber){
-        return postRepository.findByPostNumber(postNumber);
-    }
-    
-    public PostData addPost(PostData postData){
-    	ThreadData threadData = findThreadByNumber(postData.getThread().getThreadNumber());
-    	UserData userData = findUserByUsername(postData.getUser().getUsername());
-    	
-    	postData.setUser(userData);
-    	postData.setThread(threadData);
-    	postData = save(postData);
-    	
-    	save(threadData.addPost(postData));
-    	
-    	return postData;
-    }
-    
-    public Collection<PostData> findAllPosts(){
-    	return postRepository.findAll();
-    }
-    
-    public Collection<ThreadData> findAllThreads(){
-    	return threadRepository.findAll();
-    }
-    
-    public Collection<ThreadData> findLastUpdatedThreads(){
-    	return threadRepository.findByLastUpdated();
-    }
+	public UserData findUserByUsername(String username) {
+		return userRepository.findByUsername(username);
+	}
+
+	public StockData findStockByStockName(String stockName) {
+		return stockRepository.findByStockName(stockName);
+	}
+
+	public ThreadData findThreadByName(String threadName) {
+		return threadRepository.findByThreadName(threadName);
+	}
+
+	public PostData findPostByNumber(String postNumber) {
+		return postRepository.findByPostNumber(postNumber);
+	}
+
+	public PostData addPost(PostData postData) {
+		postData = violationCheck(postData);
+		postData = save(postData);
+		save(postData.getThread().addPost(postData));
+
+		return postData;
+	}
+
+	public Collection<PostData> findAllPosts() {
+		return postRepository.findAll();
+	}
+
+	public Collection<UserData> findAllUsers() {
+		return userRepository.findAll();
+	}
+
+	public Collection<StockData> findAllStocks() {
+		return stockRepository.findAll();
+	}
+
+	public Collection<PostData> findAllPostsByThreadId(Long threadName) {
+		return postRepository.findPostByThread(threadName);
+	}
+
+	public Collection<ThreadData> findAllThreads() {
+		return threadRepository.findAll();
+	}
+
+	public Collection<ThreadData> findLastUpdatedThreads() {
+		return threadRepository.findByLastUpdated();
+	}
+
+	public Collection<InquiryData> findAllRegistredEmail() {
+		return registerEmailRepository.findAll();
+	}
+
+	public PostData violationCheck(PostData postData) {
+		String text = postData.getText();
+		StringBuilder replace = new StringBuilder();
+
+		badWords.add("fitta");
+		badWords.add("kuk");
+		badWords.add("neger");
+		badWords.add("hora");
+		badWords.add("bög");
+
+		for (String s : badWords) {
+			if (text.contains(s)) {
+				replace.append(s.substring(0, 1));
+				for (int i = 0; i < s.length() - 2; i++) {
+					replace.append("*");
+				}
+				replace.append(s.substring(s.length()-1, s.length()));
+				text = text.replace(s, replace.toString());
+				replace = new StringBuilder();
+			}
+		}
+
+		return postData.setText(text);
+	}
 }

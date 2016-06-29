@@ -4,10 +4,15 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.QueryMap;
+import se.amdev.ak_app.data.model.PostWeb;
+import se.amdev.ak_app.data.model.StockWeb;
 import se.amdev.ak_app.data.model.ThreadWeb;
+import se.amdev.ak_app.data.model.UserWeb;
 
 
 /**
@@ -15,9 +20,21 @@ import se.amdev.ak_app.data.model.ThreadWeb;
  */
 public interface Request {
 
-    @GET("{what}")
-    Call<ArrayList<ThreadWeb>> getAll(@Path("what") String path);
+//    @GET("{what}")
+//    Call<ArrayList<ThreadWeb>> getAll(@Path("what") String path);
 
-    @GET("thread")
-    Call<ArrayList<ThreadWeb>> getTop(@QueryMap Map<String, String> param);
+    @GET("{what}")
+    Call<ArrayList<ThreadWeb>> getAllThreads(@Path("what") String path, @QueryMap Map<String, String> param);
+
+    @GET("{what}")
+    Call<ArrayList<PostWeb>> getAllPosts(@Path("what") String path, @QueryMap Map<String, String> param);
+
+    @GET("{what}")
+    Call<UserWeb> getUser(@Path("what") String path, @QueryMap Map<String, String> param);
+
+    @GET("{what}")
+    Call<ArrayList<StockWeb>> getStocks(@Path("what") String path);
+
+    @POST("{what}")
+    Call<PostWeb> postPost(@Path("what") String path, @QueryMap Map<String, String> param, @Body PostWeb post);
 }

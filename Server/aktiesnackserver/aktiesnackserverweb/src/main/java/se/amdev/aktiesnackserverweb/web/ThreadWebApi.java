@@ -13,12 +13,14 @@ import javax.ws.rs.core.UriInfo;
 import se.amdev.aktiesnackserverdata.model.ThreadData;
 import se.amdev.aktiesnackserverweb.model.ThreadWeb;
 import se.amdev.aktiesnackserverweb.service.WebService;
+import se.amdev.stockdownloader.StockDownloaderMain;
+
 import static se.amdev.aktiesnackserverweb.parser.ModelParser.*;
 
 import java.net.URI;
 import java.util.Collection;
 
-@Path("/thread")
+@Path("/threads")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class ThreadWebApi {
@@ -39,44 +41,58 @@ public class ThreadWebApi {
 	}
 
 	@GET
-	public Response getThread(@QueryParam("tn") String threadNumber, @QueryParam("top") String top) {
-		if (threadNumber != null) {
-			ThreadData threadData = service.findThreadByNumber(threadNumber);
+	public Response getThread(@QueryParam("tn") String threadName, @QueryParam("top") String top) {
+		if (threadName != null) {
+			ThreadData threadData = service.findThreadByName(threadName);
 			if (threadData != null) {
 				return Response.ok(new ThreadWeb(threadData)).build();
 			}
 			else {
 				return Response.status(Status.NO_CONTENT).build();
 			}
-			
+
 		}
-		if(top != null){
+		if (top != null) {
 			Collection<ThreadWeb> threads = parseCollectionThread(service.findLastUpdatedThreads());
-			if(threads == null){
+			if (threads.isEmpty()) {
 				return Response.status(Status.NO_CONTENT).build();
 			}
-			
-			GenericEntity<Collection<ThreadWeb>> entity = new GenericEntity<Collection<ThreadWeb>>(threads){};
-			
+
+			GenericEntity<Collection<ThreadWeb>> entity = new GenericEntity<Collection<ThreadWeb>>(threads)
+			{
+			};
+
 			return Response.ok(entity).build();
 		}
-		else{
+		else {
 			Collection<ThreadWeb> threads = parseCollectionThread(service.findAllThreads());
-			if(threads == null){
+			if (threads.isEmpty()) {
 				return Response.status(Status.NO_CONTENT).build();
 			}
-			
-			GenericEntity<Collection<ThreadWeb>> entity = new GenericEntity<Collection<ThreadWeb>>(threads){};
-			
+
+			GenericEntity<Collection<ThreadWeb>> entity = new GenericEntity<Collection<ThreadWeb>>(threads)
+			{
+			};
+
 			return Response.ok(entity).build();
 		}
 	}
 
 	@POST
 	public Response postThread(ThreadWeb threadWeb) {
-		ThreadData threadData = service.save(service.create(threadWeb.getThreadNumber(), threadWeb.getDescription()));
+		ThreadData threadData = service.save(service.create(threadWeb.getThreadName(), threadWeb.getDescription(), threadWeb.getCurrency()));
 
-		URI location = uriInfo.getAbsolutePathBuilder().path("hej/").build(threadWeb.getThreadNumber());
+		URI location = uriInfo.getAbsolutePathBuilder().path("hej/").build(threadWeb.getThreadName());
 		return Response.created(location).entity(new ThreadWeb(threadData)).build();
+	}
+
+	@POST
+	@Path("/add")
+	public Response postit() {
+
+		StockDownloaderMain.nasdaqCompanyUpdate();
+//		StockDownloaderMain.aktietorgetCompanyUpdate();
+
+		return Response.created(null).build();
 	}
 }

@@ -1,48 +1,48 @@
 package se.amdev.aktiesnackserverweb.model;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 
 import se.amdev.aktiesnackserverdata.model.ThreadData;
-import static se.amdev.aktiesnackserverweb.parser.ModelParser.*;
 
 public class ThreadWeb {
 
-	private String threadNumber;
+	private String threadName;
 
 	private String description;
 
-	private Collection<PostWeb> posts;
+	private String numberOfPosts;
+
+	private String currency;
+//
+	private Date lastUpdatedTime;
 	
 	private Date creationTime;
-
-	private Date lastUpdatedTime;
 
 	protected ThreadWeb() {
 
 	}
 
-	public ThreadWeb(String threadNumber, String description) {
-		this.threadNumber = threadNumber;
+	public ThreadWeb(String threadName, String description, String currency) {
+		this.threadName = threadName;
 		this.description = description;
-		this.posts = new ArrayList<>();
+		this.currency = currency;
 	}
 
 	public ThreadWeb(ThreadData threadData) {
-		this.threadNumber = threadData.getThreadNumber();
+		this.threadName = threadData.getThreadName();
 		this.description = threadData.getDescription();
-		this.posts = parseCollectionPost(threadData.getPosts());
+		this.currency = threadData.getCurrency();
+		this.numberOfPosts = String.valueOf(threadData.getPosts().size());
 		this.creationTime = threadData.getCreationTime();
 		this.lastUpdatedTime = threadData.getLastUpdatedTime();
 	}
 
-	public String getThreadNumber() {
-		return threadNumber;
+	public String getThreadName() {
+		return threadName;
 	}
 
-	public void setThreadNumber(String threadNumber) {
-		this.threadNumber = threadNumber;
+	public void setThreadName(String threadName) {
+		this.threadName = threadName;
 	}
 
 	public String getDescription() {
@@ -53,18 +53,26 @@ public class ThreadWeb {
 		this.description = description;
 	}
 
-	public Collection<PostWeb> getPosts() {
-		return posts;
+	public String getNumberOfPosts() {
+		return numberOfPosts;
 	}
 
-	public void setPosts(PostWeb postWeb) {
-		posts.add(postWeb);
+	public void setNumberOfPosts(String numberOfPosts) {
+		this.numberOfPosts = numberOfPosts;
 	}
 	
+	public String getCurrency() {
+		return currency;
+	}
+	
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+
 	public String getCreationTime() {
 		return creationTime.toString();
 	}
-	
+
 	public String getLastUpdatedTime() {
 		return lastUpdatedTime.toString();
 	}

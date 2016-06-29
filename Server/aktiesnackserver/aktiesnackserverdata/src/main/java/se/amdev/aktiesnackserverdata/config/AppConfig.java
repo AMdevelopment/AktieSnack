@@ -25,10 +25,10 @@ public class AppConfig {
 	public DataSource dataSource() {
 		HikariConfig config = new HikariConfig();
 		config.setDriverClassName("com.mysql.jdbc.Driver");
-		config.setJdbcUrl("jdbc:mysql://104.155.7.177/asdb");
+		config.setJdbcUrl("jdbc:mysql://stocktalkdatabse.cvfledfuyf1q.eu-central-1.rds.amazonaws.com:3306/stocktalk");
 		config.setUsername("root");
-		config.setPassword("root");
-
+		config.setPassword("amdevelopment");
+		
 //		config.setJdbcUrl("jdbc:mysql://localhost:3306/asdb");
 //		config.setUsername("root");
 //		config.setPassword("Sammasak");
