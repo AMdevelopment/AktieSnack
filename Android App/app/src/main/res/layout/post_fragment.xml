@@ -21,6 +21,13 @@
             android:layout_height="match_parent">
             <!--android:layout_below="@+id/tool_bar_location"-->
         </ListView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -83,5 +90,6 @@
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
+
 
 </android.support.v4.widget.DrawerLayout>

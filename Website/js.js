@@ -1,13 +1,12 @@
 
 $("#send_button").
 hover(function() {
-  $(this).not(".clickedTemp").css("opacity", "1");
+  $(this).not(".clickedTemp").css("opacity", "1.0");
 }, function() {
-  $(this).not(".clickedTemp").css("opacity", "0.8");
+  $(this).not(".clickedTemp").css("opacity", "0.90");
 }).
 on("click", function(){
   $(this).addClass("clickedTemp");
-  $(this).css("border-radius", "5px 5px 5px 5px");
 
   var email = $("#email_adress").val();
   if(isValidEmailAddress(email)){
@@ -26,8 +25,10 @@ on("click", function(){
         if(response == "OK"){
           $("#send_button").html("Tack för visat intresse!");
           $("#email_adress").hide();
+
         }
         else{
+          $("#form_container").css("margin-top","2vh");
           $("#h3").text("Ett fel uppstod, försök igen.");
           setTimeout(function () {
             reloader();
@@ -37,6 +38,7 @@ on("click", function(){
     });
   }
   else{
+    $("#form_container").css("margin-top","2vh");
     $("#h3").text("Ett fel uppstod, försök igen.");
     setTimeout(function () {
       reloader();

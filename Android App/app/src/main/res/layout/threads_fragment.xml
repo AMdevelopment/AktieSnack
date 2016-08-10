@@ -20,17 +20,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/main_thread_latest_updated"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Latest updated threads"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:background="#d6d6d6"
-                android:textSize="25dp"
-                android:layout_centerInParent="true" />
-
             <ListView
                 android:id="@+id/main_thread_top_listview"
                 android:layout_width="match_parent"
@@ -43,23 +32,11 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/main_thread_all_thread"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="All threads"
-                android:textColor="#000000"
-                android:background="#d6d6d6"
-                android:textSize="25dp"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center_horizontal" />
-
             <ListView
                 android:id="@+id/main_thread_listview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="25"/>
+                android:layout_weight="25" />
 
         </LinearLayout>
     </LinearLayout>
@@ -85,16 +62,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
             android:text="Username"
-            android:textSize="30sp"
-            android:paddingTop="10dp"/>
+            android:textSize="30sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingTop="5dp"
-            android:paddingBottom="10dp">
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp">
 
             <TextView
                 android:id="@+id/user_slide_firstname"
@@ -107,21 +84,20 @@
                 android:id="@+id/user_slide_lastname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LastName"
                 android:layout_alignRight="@id/user_slide_firstname"
-                android:textSize="25sp"
                 android:paddingLeft="10dp"
-                />
+                android:text="LastName"
+                android:textSize="25sp" />
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/user_slide_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="Log out"
-            android:textAlignment="center"
-            android:id="@+id/user_slide_button"
-            android:layout_gravity="center_horizontal" />
+            android:textAlignment="center" />
 
     </LinearLayout>
 

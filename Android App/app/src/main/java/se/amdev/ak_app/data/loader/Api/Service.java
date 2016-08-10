@@ -1,14 +1,13 @@
 package se.amdev.ak_app.data.loader.Api;
 
-import android.support.annotation.MainThread;
-import android.support.design.widget.CoordinatorLayout;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 
@@ -18,6 +17,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import se.amdev.ak_app.R;
 import se.amdev.ak_app.data.adapter.CollectionPostAdapter;
 import se.amdev.ak_app.data.adapter.CollectionStockAdapter;
 import se.amdev.ak_app.data.adapter.CollectionThreadAdapter;
@@ -25,7 +25,7 @@ import se.amdev.ak_app.data.loader.ApplicationLoader;
 import se.amdev.ak_app.data.model.PostWeb;
 import se.amdev.ak_app.data.model.StockWeb;
 import se.amdev.ak_app.data.model.ThreadWeb;
-import se.amdev.ak_app.data.model.UserWeb;
+import se.amdev.ak_app.ui.activity.MainActivity;
 import se.amdev.ak_app.ui.fragment.PostFragment;
 import se.amdev.ak_app.ui.fragment.ThreadsFragment;
 
@@ -59,7 +59,12 @@ public class Service {
                     ApplicationLoader.threadList.clear();
                     if(response.body() != null) {
                         ApplicationLoader.threadList.addAll(response.body());
+                        System.out.println(response.body());
                     }
+                }
+                if(ThreadsFragment.favThreadsListView != null) {
+                    ThreadsFragment.setList();
+                    MainActivity.bar.setVisibility(View.GONE);
                 }
             }
 
@@ -88,20 +93,20 @@ public class Service {
 
             @Override
             public void onResponse(Call<ArrayList<ThreadWeb>> call, Response<ArrayList<ThreadWeb>> response) {
-                if(ApplicationLoader.topThreadList.isEmpty() || (!ApplicationLoader.topThreadList.containsAll(response.body()))) {
-                    ApplicationLoader.topThreadList.clear();
+                if(ApplicationLoader.favThreadList.isEmpty() || (!ApplicationLoader.favThreadList.containsAll(response.body()))) {
+                    ApplicationLoader.favThreadList.clear();
                     if(response.body() != null) {
                         int i = 0;
                         for(ThreadWeb t : response.body()){
                             if(i == 5){
                                 break;
                             }
-                            ApplicationLoader.topThreadList.add(t);
+                            ApplicationLoader.favThreadList.add(t);
                             i++;
                         }
                     }
                 }
-                if(ThreadsFragment.topThreadsListView != null) {
+                if(ThreadsFragment.favThreadsListView != null) {
                     ThreadsFragment.setList();
                 }
             }

@@ -36,21 +36,5 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="#dadada"
-        android:choiceMode="singleChoice"
-        android:orientation="vertical"
-        android:scrollbars="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="USER SIDE" />
-
-    </LinearLayout>
 </LinearLayout>
 

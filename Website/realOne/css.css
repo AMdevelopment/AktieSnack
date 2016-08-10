@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow:scroll;
+  background-image: url(img/suit.jpg);
+
+}
+div {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-size: 6vh;
+}
+
+#image_main {
+  position: fixed;
+
+  bottom:0;
+
+  width: 25vw;
+  height: 32vh;
+
+  background-image: url(img/apa5.png);
+  background-repeat: no-repeat;
+}
+
+#main_container {
+
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  overflow:hidden;
+
+}
+
+#welcome_container{
+
+  overflow:hidden;
+
+  position: relative;
+
+  opacity: 0.95;
+
+  text-align: center;
+  background-color:#404040;
+
+  padding: 4vh 4vw;
+
+  /*border-radius: 5px 5px 5px 5px;*/
+
+}
+
+#welcome{
+
+  opacity: 0.8;
+  color:#ffebcc;
+  font-size: 6vh;
+  font-weight: 700;
+}
+
+#welcome_text{
+
+  opacity: 0.8;
+  margin-top: 3vh;
+  max-height: 280px;
+  text-align: left;
+  font-size: 3vh;
+  font-style: italic;
+  color:#fff0e6;
+}
+
+#top_wrapper{
+
+  display: block;
+  width: 50%;
+  margin: 5vh auto 0;
+
+  position: relative;
+  /*border-radius: 5px 5px 0px 0px;*/
+
+  overflow:hidden;
+
+
+}
+
+#form_container{
+
+  width:  100%;
+  height: 25vh;
+
+  margin-top: 5vh;
+
+  position: relative;
+
+  overflow:hidden;
+}
+
+#email_adress {
+  display: inline-block;
+
+  width:  50vw;
+  height: 10vh;
+
+  padding-left: 1vw;
+
+  background-color:#404040;
+  color: 	white;
+
+  font-size: 4vh;
+
+  overflow:hidden;
+
+  position: relative;
+
+}
+
+#send_button {
+
+  /*border: 0.5vh solid #404040;
+  border-top: none;*/
+
+  padding-top: 3vh;
+
+  display: flex;
+
+  display: inline-block;
+
+  font-weight: 700;
+
+  background-color:#ff8533;
+  opacity: 0.90;
+
+  height: 7vh;
+  width: 50vw;
+
+  font-size: 3vh;
+
+  color:#ffebcc;
+
+  text-align: center;
+
+  position:relative;
+
+  /*border-radius: 0px 0px 5px 5px;*/
+
+  overflow:hidden;
+  cursor:pointer;
+}
+
+#h3{
+  color: red;
+}
+
+
+#table_container{
+
+ margin-bottom: 5vh;
+ margin-right: 5vh;
+
+  width: auto;
+  height: auto;
+
+  bottom:0;
+  right: 0;
+
+  font-size: 3vh;
+
+  font-weight: 700;
+  position: fixed;
+
+  color:#ff8533;
+  overflow: hidden;
+}

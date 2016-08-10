@@ -1,2 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="adebe28e0c0c05d34a3bfd76f3275bf4d8ff87b6">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-7.8.0_d9973efe92328b5a2bffb1c8ba12c1d9d8e723fd/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-7.8.0_9cb2ca08ea8856ad51e1b6257e6224d803a83bbe/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e23ea11124bb700eeddd4ab7aa848c615f493850">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-7.8.0_d180127e31a8bff9513148b2504df5cfe2d7972f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-22.2.0_6f33d310cc97a78a448abe238dd2a40ec21b7f83/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-customtabs-23.4.0_46094c6696bd8192916bca45fd9cbd3e9be512ce/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.0.1_8c1f7506c66c04c52a43d8fd04b6198f49fe2723/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_82d54c654074a0088fc3d5f98283690e05e200b4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f98f49732d55505e9a987e65b8f1f73399494ab3">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_836443cdeac567f5b041df61b13187cad7dee97a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.0.1_c3a59e32de27aeb21c4905ec0797a40f51a0b53a/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_116c13d0c9a1403c763b9de5d78b17822285af15/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2e24e5f1b11170163028277de63f709e42525db4">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-7.8.0_7ad00ff8fb4396177ebd9c849f04aa97877de9e9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.2.0_440a4038f82c9ff8377da95138df56a001f383d0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-23.4.0_5b5f2a0363d606f870de62d2443bca112bcb39cc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_7883a56bdc0cf86cdcfe4ca6c4e813f7a0918ea8/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b99f0b78bbcb76b915bc6529a83b65d4d46990dd">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-7.8.0_5b89475666fde14692f6da44b6b375584a4e865e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="130b32ed466fa0f63efd4c7d6250ccd2ed506790">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-7.8.0_d7b754371ae8e32f4c8931229f12638587d68d41/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="edea92852b40eee716e910af8dad9eeaa58fb0e1">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appstate-7.8.0_4d6cb65b6d242cd833c4e956e3fe78fd9e4611af/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="166e458ee3b5fb5fcff0f936df3f3a788e6c54f3">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-7.8.0_a93de8df5700db037de13e9c81bb6f40d27b04d7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="42a3ae86dd3ae2876d3e95c2e6e104ae57a50a65">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.14.1_01ea39cf4e0e15d9902a5ed7847c545601c6c40d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="42a1ee578b62fd1bd28b3307a679dc9ba0791587">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-7.8.0_4e8ae4be3f4ec02c315d873c51d7d57d1ff5c2c0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.2_eadb7db9a2d99c1bc5cf19b72540d449dabdb0b6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="98137c4d12c50923f5809852b1ef4d1c4e162081">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-7.8.0_67ff1c96cec18fdb4f9313a5dc56cb720f627867/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-7.8.0_3355b8ecd4890ce39ccc9b147269f3a2fcf65441/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="cb6fab7a71fa9ec1f483d44c5fca65ab469d8aca">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-7.8.0_01f6a5ccef39e196a5ef65f54bb4d4447316277b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d11330ea68c0d964d30d5caed1f27e6b1488b189">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-7.8.0_f94fb1032555f02b4c2c092a4be86cc3a441c21e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_413885c0b3d543443e20e6115a3aa2e806f9326c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-7.8.0_951cc4358d4bfb9170636001052516c896c8502d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4a135d56554069e5d0ff80e3220e887e57146ee5">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-7.8.0_0695bb35da2ec4c0875a4e426c6f04881c92db59/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c2ac04c5b232f6f0658ee4f1c13be09cd76406e2">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-7.8.0_0fb46f22e1dcd03f037db62bd15a5e03a859559f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.1_9b3fe7ce592db6e68d3fc68e6a037efbabe9afb0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-7.8.0_7bdc749a9bdafd64df9b40b86e26dca83fc63da8/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c5cafb324568d954780abb858c25db7ce675ab3c">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-7.8.0_f45e600a91fba7fceec2335db601627c8fb7e48f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_eacb6642cc5a3ae9adba71099a4dac0f43097b91/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-7.8.0_09747e18b66ce2058ced6a179a117f28d092a74e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="056d7192eaafc6aa4996e0adcb0ff89964fed2f3">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0aa94d71d872cf453053b0964327159810c9813e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6e85edfc9b5346d216e50ccef1f8e825504144a3">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-7.8.0_c50c42b104cc4aacfa75b8e67f06e106efc69eb6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="77a9dcb5f8b1dba36aacaa9c150eb0942dbea158">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-7.8.0_16a1516f3467e1bf8a2bdb878274085e55631084/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_a0755b43f5d772f612dd222f91ff1d5516a5f986/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.2_d0c67acad2311e8e55b14ab829df89ef9dbf5203/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_fca786bd336fc3a7090d94644e94b3b897cd62fe/classes.dex" />
+    </item>
+
+</items>

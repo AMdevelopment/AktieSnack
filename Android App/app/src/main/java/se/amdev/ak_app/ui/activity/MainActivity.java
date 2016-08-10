@@ -3,12 +3,17 @@ package se.amdev.ak_app.ui.activity;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 
+import se.amdev.ak_app.R;
 import se.amdev.ak_app.data.loader.ApplicationLoader;
 import se.amdev.ak_app.ui.fragment.LoginFragment;
 import se.amdev.ak_app.ui.fragment.ThreadsFragment;
 
 public class MainActivity extends SingleFragmentActivity {
+
+    public static ProgressBar bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +23,8 @@ public class MainActivity extends SingleFragmentActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        bar = (ProgressBar) findViewById(R.id.progress_bar_main);
+        bar.setVisibility(View.VISIBLE);
         ApplicationLoader.loaderThread();
     }
 
