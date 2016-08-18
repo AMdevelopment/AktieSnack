@@ -25,7 +25,9 @@ public final class PostAdapter implements JsonDeserializer<PostWeb>, JsonSeriali
         JsonObject json = new JsonObject();
         json.add("user", new Gson().toJsonTree(post.getUser(), UserWeb.class));
         json.addProperty("postNumber", post.getPostNumber());
+        json.addProperty("postId", post.getPostId());
         json.addProperty("text", post.getText());
+        json.addProperty("vote", post.getVote());
         json.addProperty("createdTime", post.getCreationTime());
         json.addProperty("lastUpdatedTime", post.getLastUpdatedTime());
 
@@ -35,8 +37,6 @@ public final class PostAdapter implements JsonDeserializer<PostWeb>, JsonSeriali
     @Override
     public PostWeb deserialize(JsonElement arg0, Type arg1, JsonDeserializationContext arg2) throws JsonParseException {
         JsonObject json = arg0.getAsJsonObject();
-//        UserWeb user = new Gson().fromJson(json.get("user"), UserWeb.class);
-//        ThreadWeb thread = new Gson().fromJson(json.get("thread"), ThreadWeb.class);
         String text = json.get("text").getAsString();
 
         return new PostWeb(text);

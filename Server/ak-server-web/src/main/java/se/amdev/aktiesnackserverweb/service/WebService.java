@@ -35,8 +35,8 @@ public class WebService {
 		badWords = new ArrayList<>();
 	}
 
-	public UserData create(String username, String email, String firstName, String lastName) {
-		return new UserData(username, email, firstName, lastName);
+	public UserData create(String username, String email, String firstName, String lastName, String password) {
+		return new UserData(username, email, firstName, lastName, password);
 	}
 
 	public ThreadData create(String threadNumber, String description, String currency) {
@@ -91,6 +91,10 @@ public class WebService {
 
 	public PostData findPostByNumber(String postNumber) {
 		return postRepository.findByPostNumber(postNumber);
+	}
+	
+	public PostData findPostByPostId(String postId) {
+		return postRepository.findByPostId(postId);
 	}
 
 	public PostData addPost(PostData postData) {

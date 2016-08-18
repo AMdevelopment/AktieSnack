@@ -54,7 +54,7 @@
         jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="f98f49732d55505e9a987e65b8f1f73399494ab3">
+        sha1="04c8dd097552453a150c4ed608dd31cd9f490764">
         <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_836443cdeac567f5b041df61b13187cad7dee97a/classes.dex" />
     </item>
     <item
@@ -243,7 +243,7 @@
         jar="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="056d7192eaafc6aa4996e0adcb0ff89964fed2f3">
+        sha1="be9deebba41543732727505b3cbc1ea448af700b">
         <dex dex="/Users/Martin/Desktop/AktieSnack.se/Android App/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0aa94d71d872cf453053b0964327159810c9813e/classes.dex" />
     </item>
     <item

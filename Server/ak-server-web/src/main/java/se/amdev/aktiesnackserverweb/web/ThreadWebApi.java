@@ -52,7 +52,7 @@ public class ThreadWebApi {
 			}
 
 		}
-		if (top != null) {
+		else if (top != null) {
 			Collection<ThreadWeb> threads = parseCollectionThread(service.findLastUpdatedThreads());
 			if (threads.isEmpty()) {
 				return Response.status(Status.NO_CONTENT).build();
@@ -67,14 +67,19 @@ public class ThreadWebApi {
 		else {
 			Collection<ThreadWeb> threads = parseCollectionThread(service.findAllThreads());
 			if (threads.isEmpty()) {
-				return Response.status(Status.NO_CONTENT).build();
+				GenericEntity<Collection<ThreadWeb>> entity = new GenericEntity<Collection<ThreadWeb>>(threads)
+				{
+				};
+				return Response.status(Status.NO_CONTENT).entity(entity).build();
 			}
+			else {
 
-			GenericEntity<Collection<ThreadWeb>> entity = new GenericEntity<Collection<ThreadWeb>>(threads)
-			{
-			};
+				GenericEntity<Collection<ThreadWeb>> entity = new GenericEntity<Collection<ThreadWeb>>(threads)
+				{
+				};
 
-			return Response.ok(entity).build();
+				return Response.ok(entity).build();
+			}
 		}
 	}
 
@@ -91,7 +96,7 @@ public class ThreadWebApi {
 	public Response postit() {
 
 		StockDownloaderMain.nasdaqCompanyUpdate();
-//		StockDownloaderMain.aktietorgetCompanyUpdate();
+		// StockDownloaderMain.aktietorgetCompanyUpdate();
 
 		return Response.created(null).build();
 	}

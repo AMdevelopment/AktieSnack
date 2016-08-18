@@ -52,7 +52,7 @@ public class PostWebApi {
 		}
 		if (threadName != null) {
 			ThreadData threadData = service.findThreadByName(threadName);
-			
+
 			Collection<PostWeb> posts = parseCollectionPost(service.findAllPostsByThreadId(threadData.getId()));
 			if (posts.isEmpty()) {
 				return Response.status(Status.NO_CONTENT).build();
@@ -79,13 +79,32 @@ public class PostWebApi {
 	}
 
 	@POST
-	public Response postPost(@QueryParam("tn") String threadName, @QueryParam("user") String username, PostWeb postWeb) {
+	public Response postPost(@QueryParam("tn") String threadName, @QueryParam("user") String username,
+			@QueryParam("vote") String vote, @QueryParam("pn") String postId, PostWeb postWeb) {
 		ThreadData threadData = service.findThreadByName(threadName);
 		UserData userData = service.findUserByUsername(username);
-		PostData postData = new PostData(userData, threadData, postWeb.getText());
-//		postData.setThread(threadData);
-		service.addPost(postData);
+		if (vote == null & postId == null) {
+			PostData postData = new PostData(userData, threadData, postWeb.getText());
+			service.addPost(postData);
 
-		return Response.ok(new PostWeb(postData)).build();
+			return Response.ok(new PostWeb(postData)).build();
+		}
+		else {
+			PostData postData = service.findPostByPostId(postId);
+			if (postData.getUserVotes().contains(userData.getUsername())) {
+				return Response.status(Status.BAD_REQUEST).build();
+			}
+			else {
+				if (vote.equals("up")) {
+					postData.increaseVote();
+				}
+				else if (vote.equals("down")) {
+					postData.decreaseVote();
+				}
+				postData.setUserVotes(userData.getUsername());
+				service.addPost(postData);
+				return Response.ok(new PostWeb(postData)).build();
+			}
+		}
 	}
 }

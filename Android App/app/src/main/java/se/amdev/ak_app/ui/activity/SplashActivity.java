@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import se.amdev.ak_app.R;
+import se.amdev.ak_app.data.loader.ApplicationLoader;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -12,8 +12,15 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        if(ApplicationLoader.user != null) {
+            Intent intent = new Intent(this, ThreadActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            System.out.println("SPLAAAAAASH");
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }

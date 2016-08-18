@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AktieSnack</string>
+    <string name="loginscreen_button_login">Log ind</string>
+    <string name="loginscreen_button_register">Tilmelde dig</string>
+    <string name="loginscreen_checkbox">Forbliv logget på</string>
+    <string name="loginscreen_header">Log ind eller tilmeld dig</string>
+    <string name="loginscreen_password_field">Adgangskode</string>
+    <string name="loginscreen_username_field">Brugernavn</string>
+    <string name="postscreen_button_send">Sende</string>
+    <string name="postscreen_write_post_field">Indtast din tekst her...</string>
+    <string name="registerscreen_button_register">Tilmelde dig</string>
+    <string name="registerscreen_email">Email</string>
+    <string name="registerscreen_firstname">Fornavn</string>
+    <string name="registerscreen_header">Tilmelde dig</string>
+    <string name="registerscreen_lastname">Efternavn</string>
+    <string name="registerscreen_password">Adgangskode</string>
+    <string name="registerscreen_username">Brugernavn</string>
+    <string name="toolbar_post_button_post">Indlӕg</string>
+    <string name="userslide_button_logout">Log ud</string>
+    <string name="userslide_button_password">Skift kodeord</string>
+    <string name="userslide_email">Email</string>
+    <string name="userslide_favorit">Dine favoritter</string>
+    <string name="userslide_firstname">Fornavn</string>
+    <string name="userslide_lastname">Efternavn</string>
+    <string name="userslide_username">Brugernavn</string>
+    <string name="toolbar_post_fav_checkbox">Fav</string>
+    <string name="stockslide_marketvalue">Markedsværdi:</string>
+    <string name="stockslide_revenue">Reagere:</string>
+    <string name="stockslide_currency">Udvikling:</string>
+    <string name="stockslide_bidprice">Købskurs:</string>
+    <string name="stockslide_askprice">Udbudspris:</string>
+    <string name="stockslide_dayhigh">Dag høj:</string>
+    <string name="stockslide_daylow">Dag lav:</string>
+    <string name="loginscreen_fail">Login mislykkedes, prøv igen</string>
+    <string name="passwordscreen_button_change">ændring</string>
+    <string name="passwordscreen_header">skift adgangskode</string>
+    <string name="passwordscreen_fail">Noget gik galt, prøv igen...</string>
+    <string name="passwordscreen_password1">Indtast din nye adgangskode</string>
+    <string name="passwordscreen_success">PASS! Adgangskoden er ændret ...</string>
+    <string name="regscreen_reg_fail">Brugernavn er allerede taget, så prøv en anden</string>
+    <string name="post_already_voted">Du har allerede stemt.</string>
+    <string name="passwordscreen_password2">og igen ...</string>
+    <string name="passwordscreen_match">Adgangskoder er ikke ens. Prøv igen ...</string>
+</resources>

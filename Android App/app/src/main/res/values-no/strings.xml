@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AktieSnack</string>
+    <string name="loginscreen_button_login">Logg inn</string>
+    <string name="loginscreen_button_register">Melde deg på</string>
+    <string name="loginscreen_checkbox">Hold meg innlogget</string>
+    <string name="loginscreen_header">Logg inn eller registrer deg</string>
+    <string name="loginscreen_password_field">Passord</string>
+    <string name="loginscreen_username_field">Brukernavn</string>
+    <string name="postscreen_button_send">Sende</string>
+    <string name="postscreen_write_post_field">Skriv inn tekst her...</string>
+    <string name="registerscreen_button_register">Melde deg på</string>
+    <string name="registerscreen_email">Email</string>
+    <string name="registerscreen_firstname">Fornavn</string>
+    <string name="registerscreen_header">Melde deg på</string>
+    <string name="registerscreen_lastname">Etternavn</string>
+    <string name="registerscreen_password">Passord</string>
+    <string name="registerscreen_username">Brukernavn</string>
+    <string name="toolbar_post_button_post">Post</string>
+    <string name="userslide_button_logout">Logg ut</string>
+    <string name="userslide_button_password">Bytt passord</string>
+    <string name="userslide_email">Email</string>
+    <string name="userslide_favorit">Favoritter</string>
+    <string name="userslide_firstname">Fornavn</string>
+    <string name="userslide_lastname">Etternavn</string>
+    <string name="userslide_username">Brukernavn</string>
+    <string name="loginscreen_fail">Pålogging mislyktes, PRØV IGJEN</string>
+    <string name="passwordscreen_button_change">Endre</string>
+    <string name="passwordscreen_fail">Noe gikk galt, prøv igjen ...</string>
+    <string name="passwordscreen_header">Bytt passord</string>
+    <string name="passwordscreen_match">Passord samsvarte ikke med. Prøv igjen..</string>
+    <string name="passwordscreen_password1">Skriv inn ditt nye passord</string>
+    <string name="passwordscreen_password2">og igjen...</string>
+    <string name="passwordscreen_success">SUKSESS! Passord endret ... </string>
+    <string name="post_already_voted">Du har allerede stemt.</string>
+    <string name="regscreen_reg_fail">Brukernavn allerede tatt, prøv en annen</string>
+    <string name="stockslide_askprice">Kurs:</string>
+    <string name="stockslide_bidprice">Budpris:</string>
+    <string name="stockslide_currency">Utvikling:</string>
+    <string name="stockslide_dayhigh">Dag høy:</string>
+    <string name="stockslide_daylow">Dag lav:</string>
+    <string name="stockslide_marketvalue">Markedsverdi:</string>
+    <string name="stockslide_revenue">Reagere:</string>
+    <string name="toolbar_post_fav_checkbox">Fav</string>
+</resources>

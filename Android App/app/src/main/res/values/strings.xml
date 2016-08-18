@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">AK-APP</string>
-
+    <string name="app_name">AktieSnack</string>
     <array name="alphabet">
         <item>*</item>
         <item>A</item>
@@ -33,4 +32,45 @@
         <item>Ö</item>
         <item>"2"</item>
     </array>
+    <string name="loginscreen_password_field">Password</string>
+    <string name="loginscreen_username_field">Username</string>
+    <string name="loginscreen_header">Sign in or sign up</string>
+    <string name="loginscreen_button_register">Sign up</string>
+    <string name="loginscreen_button_login">Sign in</string>
+    <string name="postscreen_write_post_field">Enter your text here...</string>
+    <string name="postscreen_button_send">Send</string>
+    <string name="userslide_username">Username</string>
+    <string name="userslide_firstname">First name</string>
+    <string name="userslide_lastname">Last name</string>
+    <string name="userslide_button_logout">Sign out</string>
+    <string name="registerscreen_firstname">First name</string>
+    <string name="registerscreen_lastname">Last name</string>
+    <string name="registerscreen_email">Email</string>
+    <string name="registerscreen_username">Username</string>
+    <string name="registerscreen_password">Password</string>
+    <string name="registerscreen_header">Sign up</string>
+    <string name="registerscreen_button_register">Sign up</string>
+    <string name="toolbar_post_button_post">Post</string>
+    <string name="userslide_button_password">Change password</string>
+    <string name="userslide_email">Email</string>
+    <string name="loginscreen_checkbox">Keep me signed in</string>
+    <string name="userslide_favorit">Your favorites</string>
+    <string name="toolbar_post_fav_checkbox">Fav</string>
+    <string name="passwordscreen_button_change">Change</string>
+    <string name="passwordscreen_header">Change password</string>
+    <string name="passwordscreen_password2">and again...</string>
+    <string name="passwordscreen_password1">Type in your new password</string>
+    <string name="stockslide_marketvalue">Market value:</string>
+    <string name="stockslide_currency">Increase:</string>
+    <string name="stockslide_askprice">Ask price:</string>
+    <string name="stockslide_bidprice">Bid price:</string>
+    <string name="stockslide_daylow">Day low:</string>
+    <string name="stockslide_dayhigh">Day high:</string>
+    <string name="stockslide_revenue">Revenue:</string>
+    <string name="regscreen_reg_fail">Username already taken, try another one</string>
+    <string name="post_already_voted">You have already voted.</string>
+    <string name="passwordscreen_match">Password didnt match. Try again..</string>
+    <string name="passwordscreen_success">SUCCESS! Password changed...</string>
+    <string name="passwordscreen_fail">Something went wrong, try again...</string>
+    <string name="loginscreen_fail">LOGIN FAILED, TRY AGAIN</string>
 </resources>

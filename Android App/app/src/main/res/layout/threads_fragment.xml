@@ -32,73 +32,211 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ListView
-                android:id="@+id/main_thread_listview"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="25" />
+                android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/main_thread_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="25" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="#d6d6d6">
+
+                    <ListView
+                        android:id="@+id/alphabet_list"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/alphabet"></ListView>
+                </LinearLayout>
+            </RelativeLayout>
 
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#dadada"
+        android:background="#ffffff"
         android:choiceMode="singleChoice"
         android:orientation="vertical"
         android:scrollbars="vertical">
 
-        <ImageView
-            android:id="@+id/user_slide_pic"
-            android:layout_width="103dp"
-            android:layout_height="138dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/client2" />
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
 
-        <TextView
-            android:id="@+id/user_slide_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="10dp"
-            android:text="Username"
-            android:textSize="30sp" />
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingBottom="10dp"
-            android:paddingTop="5dp">
+                <TextView
+                    android:id="@+id/user_slide_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="10dp"
+                    android:text="Username"
+                    android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/user_slide_firstname"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/user_slide_pic"
+                    android:layout_width="59dp"
+                    android:layout_height="79dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/client2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="FirstName"
-                android:textSize="25sp" />
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_weight="0.50">
 
-            <TextView
-                android:id="@+id/user_slide_lastname"
-                android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/user_slide_firstname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/textView"
+                        android:paddingLeft="20dp"
+                        android:text="FirstName"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearLayout">
+
+                    <TextView
+                        android:id="@+id/user_slide_lastname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/textView"
+                        android:paddingLeft="20dp"
+                        android:text="LastName"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearLayout2">
+
+                    <TextView
+                        android:id="@+id/user_slide_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/textView"
+                        android:paddingLeft="20dp"
+                        android:text="Email"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignRight="@id/user_slide_firstname"
-                android:paddingLeft="10dp"
-                android:text="LastName"
-                android:textSize="25sp" />
+                android:layout_above="@+id/relativeLayout3"
+                android:layout_below="@+id/relativeLayout2">
 
-        </LinearLayout>
+                <ListView
+                    android:id="@+id/user_slide_favlistview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView2"
+                    android:entries="@array/alphabet"></ListView>
 
-        <Button
-            android:id="@+id/user_slide_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Log out"
-            android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="31dp"
+                    android:background="#ff9933"
+                    android:text="@string/userslide_favorit"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+            </RelativeLayout>
 
-    </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="19dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/user_slide_button_logout"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/logout"
+                        android:textAlignment="center"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="#ffffff" />
+                    <!--android:text="@string/userslide_button_logout"-->
+                    <!--android:background="#ff9933"-->
+
+                    <Button
+                        android:id="@+id/user_slide_button_changepassword"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/settings_black"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff" />
+                    <!--android:layout_width="130dp"-->
+                    <!--android:background="#ff9933"-->
+                    <!--android:text="@string/userslide_button_password"-->
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </android.support.v4.widget.DrawerLayout>

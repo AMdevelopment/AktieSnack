@@ -7,6 +7,8 @@ import se.amdev.aktiesnackserverdata.model.UserData;
 public class UserWeb {
 
     private String username;
+    
+    private String password;
 
     private String firstName;
 
@@ -21,11 +23,12 @@ public class UserWeb {
     protected UserWeb() {
     }
 
-    public UserWeb(String username, String email, String firstName, String lastName) {
+    public UserWeb(String username, String email, String firstName, String lastName, String password) {
         this.username = username;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.password = password;
     }
 
     public UserWeb(UserData userData){
@@ -52,6 +55,10 @@ public class UserWeb {
     public String getEmail() {
         return email;
     }
+    
+    public String getPassword() {
+		return password;
+	}
 
     @Override
     public int hashCode() {

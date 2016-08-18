@@ -9,6 +9,9 @@ public class UserData extends EntityModel {
 	private String username;
 
 	@Column(nullable = false)
+	private String password;
+	
+	@Column(nullable = false)
 	private String firstName;
 
 	@Column(nullable = false)
@@ -23,11 +26,12 @@ public class UserData extends EntityModel {
 	protected UserData() {
 	}
 
-	public UserData(String username, String email, String firstName, String lastName) {
+	public UserData(String username, String email, String firstName, String lastName, String password) {
 		this.username = username;
 		this.email = email;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.password = password;
 		this.status = "Active";
 	}
 
@@ -50,6 +54,10 @@ public class UserData extends EntityModel {
 	public String getStatus() {
 		return status;
 	}
+	
+	public String getPassword() {
+		return password;
+	}
 
 	public UserData setStatus(String status) {
 		this.status = status;
@@ -68,6 +76,10 @@ public class UserData extends EntityModel {
 		result += 17 * email.hashCode();
 
 		return result;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override

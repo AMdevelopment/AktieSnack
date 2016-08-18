@@ -5,12 +5,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import se.amdev.ak_app.R;
+import se.amdev.ak_app.data.loader.ApplicationLoader;
 import se.amdev.ak_app.data.model.PostWeb;
 import se.amdev.ak_app.data.model.ThreadWeb;
 
@@ -19,13 +22,18 @@ import se.amdev.ak_app.data.model.ThreadWeb;
  */
 public class PostAdapter extends ArrayAdapter<PostWeb> {
     private View view;
+    private ArrayList<PostWeb> postWebs;
+    public static TextView vote;
+    public static ImageView dislike;
+    public static ImageView like;
 
-    public PostAdapter(Context context, ArrayList<PostWeb> posts){
+    public PostAdapter(Context context, ArrayList<PostWeb> posts) {
         super(context, R.layout.post_row, posts);
+        postWebs = posts;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         LayoutInflater threadInflater = LayoutInflater.from(getContext());
 
         view = threadInflater.inflate(R.layout.post_row, parent, false);
@@ -33,18 +41,34 @@ public class PostAdapter extends ArrayAdapter<PostWeb> {
         TextView username = (TextView) view.findViewById(R.id.post_username);
         TextView text = (TextView) view.findViewById(R.id.post_text);
         TextView time = (TextView) view.findViewById(R.id.post_time);
-        TextView answer = (TextView) view.findViewById(R.id.post_answer);
+        vote = (TextView) view.findViewById(R.id.post_vote);
+        dislike = (ImageView) view.findViewById(R.id.post_button_dislike);
+        like = (ImageView) view.findViewById(R.id.post_button_like);
 
+        RelativeLayout footer = (RelativeLayout) view.findViewById(R.id.post_footer_border);
+
+        if (position == postWebs.size() - 1) {
+            footer.setVisibility(View.GONE);
+        }
+
+        like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ApplicationLoader.votePost("up", ApplicationLoader.postList.get(position).getPostId());
+            }
+        });
+
+        dislike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ApplicationLoader.votePost("down", ApplicationLoader.postList.get(position).getPostId());
+            }
+        });
+
+        vote.setText(String.valueOf(post.getVote()));
         username.setText(post.getUser().getUsername());
         text.setText(post.getText());
         time.setText(post.getCreationTime());
-        answer.setText("ANSWER");
-        answer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "ANSWER", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         return view;
     }

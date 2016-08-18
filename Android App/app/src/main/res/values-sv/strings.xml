@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AktieSnack</string>
+    <string name="userslide_username">Användarnamn</string>
+    <string name="userslide_lastname">Efternamn</string>
+    <string name="userslide_firstname">Förnamn</string>
+    <string name="userslide_button_logout">Logga ut</string>
+    <string name="toolbar_post_button_post">Skriv</string>
+    <string name="registerscreen_username">Användarnamn</string>
+    <string name="registerscreen_password">Lösenord</string>
+    <string name="registerscreen_lastname">Efternamn</string>
+    <string name="registerscreen_header">Skapa konto</string>
+    <string name="registerscreen_firstname">Förnamn</string>
+    <string name="registerscreen_email">Email</string>
+    <string name="registerscreen_button_register">Skapa konto</string>
+    <string name="postscreen_write_post_field">Skriv din text här...</string>
+    <string name="postscreen_button_send">Skicka</string>
+    <string name="loginscreen_username_field">Användarnamn</string>
+    <string name="loginscreen_password_field">Lösenord</string>
+    <string name="loginscreen_header">Logga in eller skapa konto</string>
+    <string name="loginscreen_button_register">Skapa konto</string>
+    <string name="loginscreen_button_login">Logga in</string>
+    <string name="loginscreen_checkbox">Kom ihåg mig</string>
+    <string name="userslide_email">Email</string>
+    <string name="userslide_button_password">Ändra lösenord</string>
+    <string name="userslide_favorit">Dina favoriter</string>
+    <string name="toolbar_post_fav_checkbox">Fav</string>
+    <string name="stockslide_revenue">Omsättning:</string>
+    <string name="stockslide_marketvalue">Marknadsvärde:</string>
+    <string name="stockslide_currency">Utveckling:</string>
+    <string name="stockslide_dayhigh">Dag hög:</string>
+    <string name="stockslide_daylow">Dag låg:</string>
+    <string name="stockslide_bidprice">Bud:</string>
+    <string name="stockslide_askprice">Kurs:</string>
+    <string name="regscreen_reg_fail">Användarnamnet är upptaget, testa ett annat</string>
+    <string name="post_already_voted">Du har redan röstat.</string>
+    <string name="passwordscreen_success">GODKÄNT! Lösenordet ändrat...</string>
+    <string name="passwordscreen_password2">och igen...</string>
+    <string name="passwordscreen_password1">Skriv in ditt nya lösenord</string>
+    <string name="passwordscreen_match">Lösenorden matchar inte. Försök igen...</string>
+    <string name="passwordscreen_header">Ändra lösenord</string>
+    <string name="passwordscreen_fail">Något gick fel, försök igen...</string>
+    <string name="passwordscreen_button_change">Ändra</string>
+    <string name="loginscreen_fail">Inloggnigen misslyckades, försök igen</string>
+</resources>

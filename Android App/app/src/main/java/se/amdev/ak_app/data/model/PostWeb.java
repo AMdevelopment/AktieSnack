@@ -4,9 +4,13 @@ public class PostWeb {
 
 	private String postNumber;
 
+	private String postId;
+
 	private String text;
 
 	private UserWeb user;
+
+	private int vote;
 
 	private String creationTime;
 
@@ -15,8 +19,9 @@ public class PostWeb {
 	protected PostWeb() {
 	}
 
-	public PostWeb(UserWeb user, String postNumber, String text, String creationTime, String lastUpdatedTime) {
+	public PostWeb(UserWeb user, String postNumber, String postId, String text, int vote, String creationTime, String lastUpdatedTime) {
 		this.user = user;
+		this.postId = postId;
 		this.postNumber = postNumber;
 		this.text = text;
 		this.creationTime = creationTime;
@@ -33,6 +38,10 @@ public class PostWeb {
 
 	public void setPostNumber(String postNumber) {
 		this.postNumber = postNumber;
+	}
+
+	public String getPostId() {
+		return postId;
 	}
 
 	public String getText() {
@@ -57,5 +66,9 @@ public class PostWeb {
 
 	public String getLastUpdatedTime() {
 		return lastUpdatedTime;
+	}
+
+	public int getVote() {
+		return vote;
 	}
 }

@@ -35,10 +35,12 @@ public final class PostAdapter implements JsonDeserializer<PostWeb>, JsonSeriali
         UserWeb user = new Gson().fromJson(json.get("user"), UserWeb.class);
         String postNumber = json.get("postNumber").getAsString();
         String text = json.get("text").getAsString();
+        String postId = json.get("postId").getAsString();
+        int vote = json.get("vote").getAsInt();
         String creationTime = json.get("creationTime").getAsString();
         String lastUpdatedTime = json.get("lastUpdatedTime").getAsString();
 
-        return new PostWeb(user, postNumber, text, creationTime, lastUpdatedTime);
+        return new PostWeb(user, postNumber, postId, text, vote, creationTime, lastUpdatedTime);
     }
 }
 

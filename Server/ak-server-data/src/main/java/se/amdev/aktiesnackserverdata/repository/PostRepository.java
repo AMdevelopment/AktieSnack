@@ -12,6 +12,7 @@ import se.amdev.aktiesnackserverdata.model.PostData;
 
 public interface PostRepository extends PagingAndSortingRepository<PostData, Long> {
 	PostData findByPostNumber(String postNumber);
+	PostData findByPostId(String postId);
 	Page<PostData> findAll(Pageable pageRequest);
 	Collection<PostData> findAll();
 	

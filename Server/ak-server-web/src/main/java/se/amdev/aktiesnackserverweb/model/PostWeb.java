@@ -4,10 +4,13 @@ import se.amdev.aktiesnackserverdata.model.PostData;
 import static se.amdev.aktiesnackserverweb.parser.ModelParser.*;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class PostWeb {
 
 	private String postNumber;
+	
+	private String postId;
 
 	private String text;
 
@@ -18,28 +21,37 @@ public class PostWeb {
 	private Date creationTime;
 
 	private Date lastUpdatedTime;
+	
+	private int vote;
 
 	protected PostWeb() {
 	}
 
 	public PostWeb(String text) {
-//		this.user = user;
-//		this.thread = thread;
-//		this.postNumber = postNumber;
 		this.text = text;
+		this.vote = 0;
 	}
 	
 	public PostWeb(PostData postData){
 		this.user = parseUser(postData.getUser());
-//		this.thread = parseThread(postData.getThread());
 		this.postNumber = postData.getPostNumber();
+		this.postId = postData.getPostId();
 		this.text = postData.getText();
 		this.creationTime = postData.getCreationTime();
 		this.lastUpdatedTime = postData.getLastUpdatedTime();
+		this.vote = postData.getVote();
+	}
+	
+	public int getVote() {
+		return vote;
 	}
 
 	public String getPostNumber() {
 		return postNumber;
+	}
+	
+	public String getPostId() {
+		return postId;
 	}
 
 	public void setPostNumber(String postNumber) {

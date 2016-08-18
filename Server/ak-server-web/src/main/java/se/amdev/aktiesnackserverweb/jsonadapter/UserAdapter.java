@@ -22,6 +22,7 @@ public final class UserAdapter implements JsonDeserializer<UserWeb>, JsonSeriali
     public JsonElement serialize(UserWeb user, Type type, JsonSerializationContext context) {
         JsonObject json = new JsonObject();
         json.addProperty("username", user.getUsername());
+        json.addProperty("password", user.getPassword());
         json.addProperty("email", user.getEmail());
         json.addProperty("firstName", user.getFirstName());
         json.addProperty("lastName", user.getLastName());
@@ -37,9 +38,10 @@ public final class UserAdapter implements JsonDeserializer<UserWeb>, JsonSeriali
         String username = json.get("username").getAsString();
         String email = json.get("email").getAsString();
         String firstName = json.get("firstName").getAsString();
+        String password = json.get("password").getAsString();
         String lastName = json.get("lastName").getAsString();
 
-        return new UserWeb(username, email, firstName, lastName);
+        return new UserWeb(username, email, firstName, lastName, password);
     }
 }
 

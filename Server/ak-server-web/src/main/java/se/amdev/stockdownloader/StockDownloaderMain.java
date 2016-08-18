@@ -67,7 +67,7 @@ public class StockDownloaderMain {
 			day = current.getTime().toString().substring(0, 3);
 			current.setTime(sdf.parse(current.getTime().toString().substring(11, 19)));
 			close.setTime(sdf.parse("17:45:00"));
-			open.setTime(sdf.parse("09:15:00"));
+			open.setTime(sdf.parse("07:15:00"));
 		}
 		catch (ParseException ex) {
 			// TODO Auto-generated catch block

@@ -11,12 +11,5 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/login_guest_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Continue as Guest"
-            android:layout_gravity="right"/>
-
     </LinearLayout>
 </android.support.v7.widget.Toolbar>

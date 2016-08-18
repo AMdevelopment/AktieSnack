@@ -21,14 +21,14 @@ public class ModelParser {
 		if (userWeb == null) {
 			return null;
 		}
-		return new UserData(userWeb.getUsername(), userWeb.getEmail(), userWeb.getFirstName(), userWeb.getLastName());
+		return new UserData(userWeb.getUsername(), userWeb.getEmail(), userWeb.getFirstName(), userWeb.getLastName(), userWeb.getPassword());
 	}
 
 	public static UserWeb parseUser(UserData userData) {
 		if (userData == null) {
 			return null;
 		}
-		return new UserWeb(userData.getUsername(), userData.getEmail(), userData.getFirstName(), userData.getLastName());
+		return new UserWeb(userData.getUsername(), userData.getEmail(), userData.getFirstName(), userData.getLastName(), userData.getPassword());
 	}
 
 	public static ThreadWeb parseThread(ThreadData threadData) {
